@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form name="fomul" method="post" action="{{ __('create-coins') }}">
+                                            <form name="fomul" method="post" action="{{route('create-coins')}}">
                                                 @csrf
                                                 <div class="form-group">
 
