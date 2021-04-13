@@ -35,30 +35,29 @@ class CoinsController extends Controller
      */
     public function create(Request $request)
     {
-        if ($request->miSelect  != 'otra') {
-            $coin = Coins::where('name', [$request->miSelect] )->get();
+        // if ($request->miSelect  != 'otra') {
+        //     $coin = Coins::where('name', [$request->miSelect] )->get();
             
-            $userco = new usersCoins();
-            $userco->rate = $request->tasa;
-            $userco->user_id = auth()->id();
-            $userco->coin_id = $coin[0]->id;
-            $userco->local = $request->local =='local' ? true : false;
-            dd($userco);die;
-            $userco->save();
-        }else{
-            $coin = new Coins();
-            $coin->name = $request->name;
-            $coin->symbol = $request->simbolo;
-            $coin->description = $request->desc;
-            $coin->save();
+        //     $userco = new usersCoins();
+        //     $userco->rate = $request->tasa;
+        //     $userco->user_id = auth()->id();
+        //     $userco->coin_id = $coin[0]->id;
+        //     $userco->local = $request->local =='local' ? true : false;
+        //     $userco->save();
+        // }else{
+        //     $coin = new Coins();
+        //     $coin->name = $request->name;
+        //     $coin->symbol = $request->simbolo;
+        //     $coin->description = $request->desc;
+        //     $coin->save();
 
-            $userco = new usersCoins();
-            $userco->rate = $request->tasa;
-            $userco->user_id = auth()->id();
-            $userco->coin_id = $coin->id;
-            $userco->local = $request->local=='local' ? true : false;
-            $userco->save();
-        }
+        //     $userco = new usersCoins();
+        //     $userco->rate = $request->tasa;
+        //     $userco->user_id = auth()->id();
+        //     $userco->coin_id = $coin->id;
+        //     $userco->local = $request->local=='local' ? true : false;
+        //     $userco->save();
+        // }
         return redirect()->route('coins')->with('success', 'Moneda creada con éxito');
     }
 
