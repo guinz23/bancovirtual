@@ -17,10 +17,10 @@ class CreateCuentasTable extends Migration
             $table->bigIncrements('id');
 
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->unsignedBigInteger('monedas_id');
-            $table->foreign('monedas_id')->references('id')->on('users_coins')->onDelete('cascade');
+            $table->foreign('monedas_id')->references('id')->on('users_coins');
             
             $table->text('nombre');
             $table->text('descripcion');

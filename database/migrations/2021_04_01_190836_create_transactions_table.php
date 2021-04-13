@@ -17,13 +17,13 @@ class CreateTransactionsTable extends Migration
             $table->bigIncrements('id');
 
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->unsignedBigInteger('cuenta_id');
-            $table->foreign('cuenta_id')->references('id')->on('cuentas')->onDelete('cascade');
+            $table->foreign('cuenta_id')->references('id')->on('cuentas');
 
             $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
 
             $table->text('tipo');
             $table->decimal('monto', 15, 4);
