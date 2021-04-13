@@ -43,6 +43,7 @@ class CoinsController extends Controller
             $userco->user_id = auth()->id();
             $userco->coin_id = $coin[0]->id;
             $userco->local = $request->local =='local' ? true : false;
+            dd($userco);die;
             $userco->save();
         }else{
             $coin = new Coins();
