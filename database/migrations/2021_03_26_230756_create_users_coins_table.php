@@ -18,10 +18,10 @@ class CreateUsersCoinsTable extends Migration
             $table->float('rate', 8, 5);
 
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->unsignedBigInteger('coin_id');
-            $table->foreign('coin_id')->references('id')->on('coins');
+            $table->foreign('coin_id')->references('id')->on('coins')->onDelete('cascade');
 
             $table->boolean('local');
             $table->timestamps();

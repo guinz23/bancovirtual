@@ -26,10 +26,8 @@ class CreateTransactionsTable extends Migration
             $table->foreign('categoria_id')->references('id')->on('categorias');
 
             $table->text('tipo');
-            $table->decimal('monto', 15, 4);
+            $table->decimal('monto');
             $table->text('detalle');
-            $table->integer('traslado')->nullable();
-            $table->integer('destino')->nullable();
             $table->timestamps();
         });
     }
