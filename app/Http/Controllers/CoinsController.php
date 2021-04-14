@@ -36,7 +36,7 @@ class CoinsController extends Controller
     public function create(Request $request)
     {
         if ($request->input('miSelect')  != 'otra') {
-            $coin = Coins::where('name', [$request->input('miSelect')] )->get();
+            $coin = coins::where('name', [$request->input('miSelect')] )->get();
             
             $userco = new usersCoins();
             $userco->rate = $request->input('tasa');
@@ -45,7 +45,7 @@ class CoinsController extends Controller
             $userco->local = $request->input('local') =='local' ? true : false;
             $userco->save();
         }else{
-            $coin = new Coins();
+            $coin = new coins();
             $coin->name = $request->input('name');
             $coin->symbol = $request->input('simbolo');
             $coin->description = $request->input('desc');
@@ -87,7 +87,7 @@ class CoinsController extends Controller
     public function update(Request $request)
     {
         if ($request->miSelect  != 'otra') {
-            $coin = Coins::where('name', [$request->miSelect] )->get();
+            $coin = coins::where('name', [$request->miSelect] )->get();
             
             $userco = new usersCoins();
             $userco->id = $request->id;

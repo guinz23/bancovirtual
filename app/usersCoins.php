@@ -9,7 +9,7 @@ class usersCoins extends Model
     //Relación uno a uno con tabla monedas
     public function Coin()
     {
-        return $this->belongsTo(Coins::class);
+        return $this->belongsTo(coins::class);
     }
 
     public function User()
