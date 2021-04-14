@@ -81,7 +81,7 @@ Route::put('/actualizartransacc/{id}', 'TransactionsController@update');
 
 // Reportes
 
-Route::get('/reportes', 'ReportesController@index');
+Route::get('/reportes','ReportesController@index');
 
 Route::post('/transacciones', 'ReportesController@querys');
 

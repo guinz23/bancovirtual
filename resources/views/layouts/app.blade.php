@@ -59,7 +59,7 @@
                                 <a class="nav-link" href="/categorias">{{ __('Categorías') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/reportes">{{ __('Reportes') }}</a>
+                                <a class="nav-link" href="{{url('reportes')}}">{{ __('Reportes') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
