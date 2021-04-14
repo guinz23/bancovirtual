@@ -5,8 +5,8 @@ namespace TrackYourMoney\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
-use TrackYourMoney\Coins;
-use TrackYourMoney\UsersCoins;
+use TrackYourMoney\coins;
+use TrackYourMoney\usersCoins;
 
 class CoinsController extends Controller
 {
