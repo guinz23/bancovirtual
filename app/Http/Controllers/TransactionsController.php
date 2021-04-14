@@ -40,7 +40,7 @@ class TransactionsController extends Controller
             ->select('t1.id', 't1.descripcion', DB::raw('(t1.rebajo/t1.presupuesto)*100 AS resultado'))
             ->where('t1.user_id', '=', auth()->user()->id)->get();
 
-        return view('transactions.Dashboard', ['cuentas' => $cuentas, 'categorias' => $categorias, 'transacciones' => $transacciones, 'progress_bar' => $progress_bar]);
+        return view('transactions.dashboard', ['cuentas' => $cuentas, 'categorias' => $categorias, 'transacciones' => $transacciones, 'progress_bar' => $progress_bar]);
     }
 
     public function todasMisCuentas()
