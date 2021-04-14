@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-
 <div class="container" style="max-width: 100%; overflow-x: hidden; overflow-y: auto;">
     <div class="row justify-content-center">
         <div class="col-md-9">
