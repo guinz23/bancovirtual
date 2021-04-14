@@ -16,4 +16,6 @@ class usersCoins extends Model
     {
         return $this->belongsTo(User::class);
     }
+    protected $fillable = ['rate', 'user_id', 'coin_id', 'local'];
 }
+

@@ -11,4 +11,5 @@ class coins extends Model
      {
          return $this->hasMany(Coins::class);
      }
+     protected $fillable = ['name', 'simbolo', 'nombre', 'description'];
 }
