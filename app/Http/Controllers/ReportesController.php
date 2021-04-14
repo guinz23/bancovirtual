@@ -21,7 +21,7 @@ class ReportesController extends Controller
 
     public function index()
     {
-        return view('reportes.dashboard');
+        return view('reportes.index');
     }
 
     public function querys(Request $request)
